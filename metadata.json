@@ -1,0 +1,8 @@
+
+{
+  "name": "Mon Amour - Puzzle de la Saint Valentin",
+  "description": "Une expérience romantique interactive où le destinataire doit résoudre un puzzle de sa photo pour débloquer un message d'amour personnalisé.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
