@@ -8,13 +8,19 @@ import LoveLetter from './components/LoveLetter';
 // The "password" - can be customized by the developer
 const SECRET_PASSWORD = (import.meta.env.VITE_SECRET_PASSWORD ?? "amour").toLowerCase().trim();
 
-const FINAL_MESSAGE = `💕 j'ai d'abord  fait ce petit jeu  avec le bouton "Oui" et le "Non" qui s'enfuit dès qu'on s'approche qui était dans la vidéo que je t'ai partagé. Mais je me suis dit que tu devais déjà connaître ce concept, que ce serait trop prévisible. Alors j'ai préféré te créer quelque chose d'un peu plus perso : le mot de passe, le puzzle avec ta photo... C'est pas parfait, mais au moins c'est fait pour toi et j'espère que tu as aimé. 😊
+const FINAL_MESSAGE = `💕 Mon amour,
 
-tu sais, on est tous les deux en train de construire nos vies, nos avenirs, notre stabilité. C'est notre priorité à tous les deux en ce moment, et c'est normal. Mais je crois sincèrement qu'on peut aussi construire quelque chose ensemble, à notre façon. On n'a pas besoin de choisir entre nos ambitions et nous. On peut avancer chacun de notre côté tout en avançant ensemble, à notre rythme, sans pression, sans sacrifices.
+En vérité, je ne voulais plus d’une relation. J’étais tellement fermé… tellement pas prêt… au point même où regarder une fille m’énervait. Mon cœur était ailleurs, fatigué, distant.
 
-La distance rend les choses compliquées, c'est vrai. Nos agendas chargés aussi. Mais je veut vraiment, qu'on trouve toujours du temps l'un pour l'autre. Et moi, je veux te faire cette place dans ma vie. Je veux qu'on crée nos moments, même rares, même virtuels parfois, mais qu'ils soient à nous.😊
+Mais la grâce m’a touché… et ton sourire aussi.
 
-Je t'aime, Honey. Vraiment. Et j'ai envie de voir jusqu'où on peut aller ensemble, sans forcer les choses, juste en étant nous. ❤️`;
+Ce jour où j’ai pris cette photo, je ne savais pas que je capturais bien plus qu’un simple moment. Je rencontrais celle qui allait apaiser mon cœur. Ton sourire innocent, lumineux… c’est ce qui m’a marqué. Un sourire capable de faire oublier les soucis et d’illuminer un cœur triste.
+
+Tu es la plus belle rencontre de mon année 2025.
+
+Que DIEU nous guide, nous protège et bénisse ce que nous construisons.
+
+Je t’aime profondément. ❤️`;
 
 const App: React.FC = () => {
   const [stage, setStage] = useState<AppStage>(AppStage.LOGIN);
@@ -101,7 +107,7 @@ const App: React.FC = () => {
         {stage === AppStage.PUZZLE && (
           <div className="animate-in fade-in duration-1000">
             <div className="text-center mb-8">
-              <h2 className="text-3xl font-serif text-pink-800 italic">Reconstitue le puzzle. J'aurais voulu mettre une photo de nous deux mais on en a pas encore... 😊</h2>
+              <h2 className="text-3xl font-serif text-pink-800 italic">Reconstitue le puzzle 😊</h2>
             </div>
             <PuzzleGame 
               imageUrl={puzzleImageUrl} 

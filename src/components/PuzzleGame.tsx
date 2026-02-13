@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Tile } from '../types';
 
 interface PuzzleGameProps {
@@ -88,8 +88,9 @@ const PuzzleGame: React.FC<PuzzleGameProps> = ({ imageUrl, gridSize, onComplete 
               }`}
               style={{
                 backgroundImage: `url(${imageUrl})`,
-                backgroundSize: `${gridSize * 100}%`,
+                backgroundSize: `${gridSize * 100}% ${gridSize * 100}%`,
                 backgroundPosition: `${bgX}% ${bgY}%`,
+                backgroundRepeat: 'no-repeat',
                 aspectRatio: '1/1',
               }}
             >
